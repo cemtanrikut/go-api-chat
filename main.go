@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net"
 	"strings"
+
+	"github.com/cemtanrikut/go-api-chat/app"
 )
 
 // ClientHandler defines the behavior of handling a client connection.
@@ -74,7 +76,7 @@ func main() {
 	}
 	defer ln.Close()
 
-	handler := &SimpleChatServer{}
+	handler := &app.ChatServer{}
 
 	for {
 		conn, err := ln.Accept()

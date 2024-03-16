@@ -16,6 +16,7 @@ var clients []*Client
 
 // ClientHandler defines the behavior of handling a client conn
 type ClientHandler interface {
+	HandleConnection(conn net.Conn)
 }
 
 // ChatServer implements the ClientHandler interface

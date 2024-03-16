@@ -61,7 +61,7 @@ func (cs *ChatServer) HandleConnection(conn net.Conn) {
 		}
 	}
 
-	brodcastMessage(fmt.Sprintf("%s has lef the chat", &client.username))
+	brodcastMessage(fmt.Sprintf("%s has left the chat", client.username))
 
 }
 
